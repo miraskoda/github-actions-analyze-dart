@@ -4210,7 +4210,7 @@ async function format(workingDirectory) {
 
   args.push('.');
 
-  await exec.exec('dart', args, options);
+  await exec.exec('flutter', args, options);
   
   let warningCount = 0;
   const lines = output.trim().split(/\r?\n/);
