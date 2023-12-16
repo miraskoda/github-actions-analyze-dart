@@ -4147,7 +4147,7 @@ async function analyze(workingDirectory) {
     }
   };
 
-  const args = ['--format', 'machine'];
+  const args = [''];
   args.push('.');
 
   await exec.exec('flutter analyze', args, options);
