@@ -4146,7 +4146,7 @@ async function analyze(workingDirectory) {
     }
   };
 
-  const args = [''];
+  const args = ['--format','machine'];
   args.push('.');
 
   await exec.exec('dart analyze', args, options);
