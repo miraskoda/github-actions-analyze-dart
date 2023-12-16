@@ -4117,9 +4117,8 @@ async function run() {
     const workingDirectory = path.resolve(process.env.GITHUB_WORKSPACE, core.getInput('working-directory'))
 
     const [analyzeErrorCount, analyzeWarningCount, analyzeInfoCount] = await analyze(workingDirectory);
-    const formatWarningCount = await format(workingDirectory);
-
-    const issueCount = analyzeErrorCount + analyzeWarningCount + analyzeInfoCount + formatWarningCount;
+      
+    const issueCount = analyzeErrorCount + analyzeWarningCount + analyzeInfoCount;
     const failOnInfos = core.getInput('fail-on-infos') === 'true';
     const failOnWarnings = core.getInput('fail-on-warnings') === 'true';
     const message = `${issueCount} issue${issueCount === 1 ? '' : 's'} found.`;
